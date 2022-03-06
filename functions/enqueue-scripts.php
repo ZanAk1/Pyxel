@@ -5,7 +5,7 @@ function scripts() {
     global $wp_styles; 
 
     // TOOD: minify
-    wp_enqueue_script( 'vendor-js', get_template_directory_uri() . '/dist/scripts/vendor.min.js', array( 'jquery' ), filemtime(get_template_directory() . '/dist/scripts/vendor.min.js'), true );
+   // wp_enqueue_script( 'vendor-js', get_template_directory_uri() . '/dist/scripts/vendor.min.js', array( 'jquery' ), filemtime(get_template_directory() . '/dist/scripts/vendor.min.js'), true );
     wp_enqueue_script( 'site-js', get_template_directory_uri() . '/dist/scripts/scripts.min.js', array( 'jquery' ), filemtime(get_template_directory() . '/dist/scripts/scripts.min.js'), true );
     wp_enqueue_style( 'site-css', get_template_directory_uri() . '/dist/styles/theme.css', array(), filemtime(get_template_directory() . '/dist/styles/theme.css'), 'all' );
 }

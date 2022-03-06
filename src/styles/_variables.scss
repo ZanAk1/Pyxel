@@ -1,0 +1,27 @@
+//Fonts
+@import "fonts";
+
+
+$primary: #3e3e3e;
+$secondary: #ffa200;
+$dark: #191919;
+$tertiary: #a8a8a8;
+$light: #262626;
+
+
+// Fonts
+$font-family-sans-serif: $raleway;
+
+// Buttons
+$btn-border-radius: 0;
+
+// Line Height
+$line1:1;
+$line2:1.2;
+$line3:1.5;
+
+// Grid Breakpoints
+$grid-breakpoints: (xs:0, sm:576px, md:768px, lg:992px, xl:1200px, xxl:1760px, ) !default;
+
+// Container sizing
+$container-max-widths: (sm:540px, md:720px, lg:960px, xl:1140px, xxl:1790px) !default;

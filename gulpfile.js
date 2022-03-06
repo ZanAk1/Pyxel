@@ -11,28 +11,28 @@ var cssnano = require('gulp-cssnano');
 var concat = require('gulp-concat');
 var cache = require('gulp-cached');
 var uglify = require('gulp-uglify');
-//const webp = require('gulp-webp');
+var gulpSquoosh = require('gulp-squoosh');
 
 //Bootstrap 
 var BOOTSTRAP = './node_modules/bootstrap/js/dist/';
 var bootstrap_scripts = [
 
     // Don't need jquery because WordPress comes with it
-    './node_modules/jquery/dist/jquery.min.js',
+   // './node_modules/jquery/dist/jquery.min.js',
 
     //BOOTSTRAP + 'util.js',
-    BOOTSTRAP + 'carousel.js',
-    BOOTSTRAP + 'collapse.js',
-    BOOTSTRAP + 'dropdown.js',
-    BOOTSTRAP + 'tab.js',
+  //  BOOTSTRAP + 'carousel.js',
+  //  BOOTSTRAP + 'collapse.js',
+  //  BOOTSTRAP + 'dropdown.js',
+ //   BOOTSTRAP + 'tab.js',
 ];
 
 // LazyLoading
-var lazy_load_script = './node_modules/lazyload/lazyload.min.js';
+//var lazy_load_script = './node_modules/lazyload/lazyload.min.js';
 
 
 // Slick Carousel
-var slick = './node_modules/slick-carousel/slick/slick.min.js';
+//var slick = './node_modules/slick-carousel/slick/slick.min.js';
 
 
 // Definitions
@@ -40,7 +40,7 @@ var src = './src/';
 var build = './dist/'; //Change directory if you like
 
 var sources = {
-	theme: `${src}theme-files/**/*`,
+  //  theme: `${src}theme-files/**/*`,
     images: [`${src}images/**/*`],
     styles: `${src}styles/**/*`,
     scripts: `${src}scripts/**/*`,
@@ -59,10 +59,10 @@ var destinations = {
 /**
  * Copy PHP files, base stylesheet and other WordPress items that don't need to be compiled / modified
  */
-function theme() {
-    return gulp.src(sources.theme)
-        .pipe(gulp.dest(build))
-}
+//function theme() {
+//    return gulp.src(sources.theme)
+//        .pipe(gulp.dest(build))
+//}
 
 /**
  * Optimises all source images
@@ -70,7 +70,7 @@ function theme() {
 function images() {
     return gulp.src(sources.images)
         .pipe(cache('images'))
-        //.pipe(gulpSquoosh())
+        .pipe(gulpSquoosh())
         .pipe(gulp.dest(destinations.images))
 };
 
@@ -98,18 +98,19 @@ function data_files() {
         .pipe(gulp.dest(destinations.data_files))    
 }
 
-function vendor_scripts() {
+/*function vendor_scripts() {
     return gulp.src(
             [].concat.apply([], [
               bootstrap_scripts,
-             // lazy_load_script,
-              slick,
+              //lazy_load_script,
+              //slick,
             ])
         )
         .pipe(concat('vendor.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest(destinations.scripts))
 }
+*/
 
 //Custom Scripts
 function custom_scripts() {
@@ -146,10 +147,10 @@ function watch() {
 exports.watch = gulp.series(
     clean,
     gulp.parallel(
-        theme,
+       // theme,
         images,
         custom_scripts,
-        vendor_scripts,
+        //vendor_scripts,
         styles
     ),
     watch
