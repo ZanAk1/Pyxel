@@ -17,7 +17,29 @@
 	<body <?php body_class(); ?>>
 		<header>
 			<?php $header = ['header', 'options']; 
-			$cta_info = ['cta_info','options']; ?>
+			 ?>
+
+
+<div class="text-uppercase text-center text-white py-5 bg-secondary">
+	<div class="row">
+<?php if( have_rows('header_info','options') ): ?>
+    <?php while( have_rows('header_info','options') ): the_row(); 
+
+        // Get sub field values.
+        $brandname = the_sub_field('brand_name');
+        ?>
+        <div id="hero">
+            
+            <div class="content">
+                <?=$brandname;?>
+            </div>
+        </div>
+    <?php endwhile; ?>
+<?php endif; ?>
+</div>
+</div>
+
+
 
 
 <!--
