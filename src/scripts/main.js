@@ -3,7 +3,7 @@ AOS.init({
   duration: 1000,
 });
 
-/*Lazyload*/
+/*Lazyload
 jQuery(document).ready(function() {
     var $lazy_loaded_image = jQuery('.lazyload');
     $lazy_loaded_image.lazyload().each(function() {
@@ -11,6 +11,8 @@ jQuery(document).ready(function() {
         $image.trigger('lazyload');
     });
 });
+*/
+
 
 /*Back to Top */
 jQuery("#back-top").hide();

@@ -1,2 +1,38 @@
 /*This CSS is only for main components (button, heading, image size, logo etc). For inner page css go to respective page*/
 
+@import "variables";
+
+.btn-cta{
+color:#fff;
+background:$secondary;
+border-width:1px;
+border-color: $secondary;
+border-radius: 20px;
+text-align:center;
+vertical-align: middle;
+font-size: medium;
+width: auto;
+line-height:1;
+padding:10px 20px;
+transition: all .3s;
+
+    &:hover{
+        background:transparent;
+            }
+}
+
+.btn-project{
+color:#fff;
+background:transparent;
+text-align:center;
+font-size: 1.5rem;
+width: auto;
+line-height:1;
+
+    &:hover{
+        background:$secondary;
+            }
+    &::after{
+      font-family: "Font Awesome 5"; content: "\f054";
+    }
+}

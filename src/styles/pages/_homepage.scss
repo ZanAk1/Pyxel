@@ -1,0 +1,25 @@
+@import "variables";
+
+#site-logo{
+	width:100px;
+	margin-right:auto;
+}
+.navmenu-left{
+	.navbar-title{
+	}
+.menu-item a{
+	color:#fff;
+	text-decoration:none;
+	line-height:2.2;
+	font-size:2.0rem;
+
+	&:active{
+		color:#F47B2E;
+	}
+	&:hover{
+		color:#F47B2E;
+		}
+	}
+
+}
+
