@@ -67,7 +67,6 @@
 
 //Content Excerpt
 public static function excerpt_length ( $length) {
-
 		//Default value . (hardcoded)
 	return 30;
 }

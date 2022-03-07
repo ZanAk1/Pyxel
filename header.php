@@ -19,26 +19,25 @@
 			<?php $header = ['header', 'options']; 
 			$cta_info = ['cta_info','options']; ?>
 
+
+<!--
 			<nav class="navbar navbar-dark bg-dark navbar-toggleable-lg navbar-inverse bg-inverse">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="#">
-  	
-
-
-  </a>
-  <div class="collapse navbar-collapse justify-content-between" id="navbar">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" href="#">Ball Bearings</a>
-      <a class="nav-item nav-link" href="#">TNT Boxes</a>
-    </div>
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" href="#">Logout</a>
-    </div>
-  </div>
-</nav>
-
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand" href="#">
+				</a>
+				<div class="collapse navbar-collapse justify-content-between" id="navbar">
+					<div class="navbar-nav">
+						<a class="nav-item nav-link" href="#">Ball Bearings</a>
+						<a class="nav-item nav-link" href="#">TNT Boxes</a>
+					</div>
+					<div class="navbar-nav">
+						<a class="nav-item nav-link" href="#">Logout</a>
+					</div>
+				</div>
+			</nav>
+-->
 
 
 

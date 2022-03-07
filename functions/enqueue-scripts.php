@@ -5,7 +5,7 @@ function scripts() {
     global $wp_styles; 
 
     // TOOD: minify
-   // wp_enqueue_script( 'vendor-js', get_template_directory_uri() . '/dist/scripts/vendor.min.js', array( 'jquery' ), filemtime(get_template_directory() . '/dist/scripts/vendor.min.js'), true );
+    wp_enqueue_script( 'vendor-js', get_template_directory_uri() . '/dist/scripts/vendor.min.js', array( 'jquery' ), filemtime(get_template_directory() . '/dist/scripts/vendor.min.js'), true );
     wp_enqueue_script( 'site-js', get_template_directory_uri() . '/dist/scripts/scripts.min.js', array( 'jquery' ), filemtime(get_template_directory() . '/dist/scripts/scripts.min.js'), true );
     wp_enqueue_style( 'site-css', get_template_directory_uri() . '/dist/styles/theme.css', array(), filemtime(get_template_directory() . '/dist/styles/theme.css'), 'all' );
 }
@@ -25,8 +25,11 @@ function move_jquery_into_footer( $wp_scripts ) {
 }
 
 
+/*Only enqueue if fontawesome is not using from library
 function enqueue_load_fa() {
   wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css' );
 }
 
+
 add_action( 'wp_enqueue_scripts', 'enqueue_load_fa');
+*/
